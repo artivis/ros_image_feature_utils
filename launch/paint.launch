@@ -1,0 +1,16 @@
+<launch>
+
+  <arg name="feature_detector"   default="SIFT"     />
+  <arg name="feature_descriptor" default="SIFT"     />
+  <arg name="keypoint_limit"     default="0"        />
+
+  <arg name="topic_in"           default="image_in" />
+
+  <node pkg="ros_image_feature_utils" type="paint_features" name="paint_features" output="screen">
+    <remap from="/paint_features/image_in" to="$(arg topic_in)"        />
+    <param name="feature_detector"   value="$(arg feature_detector)"   />
+    <param name="feature_descriptor" value="$(arg feature_descriptor)" />
+    <param name="keypoint_limit"     value="$(arg keypoint_limit)"     />
+  </node>
+
+</launch>
