@@ -1,1 +1,3 @@
-few tools to extract images features, paint them, save/load etc
+# An example of tools to detect, extract and plot OpenCV images features.
+
+:exclamation: OpenCV 2.4 !
